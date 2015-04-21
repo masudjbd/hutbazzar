@@ -13,17 +13,17 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 	xmlns:webflow-config="http://www.springframework.org/schema/webflow-config">
 	<mvc:annotation-driven enable-matrix-variables="true"
 		validator="validator" />
-	<context:component-scan base-package="com.packt.webstore" />
+	<context:component-scan base-package="com.bangla.store" />
 	<mvc:resources location="/resources/" mapping="/resource/**" />
 
 	<mvc:interceptors>
-		<bean class="com.packt.webstore.interceptor.PerformanceMonitorInterceptor" />
+		<bean class="com.bangla.store.interceptor.PerformanceMonitorInterceptor" />
 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
 			<property name="paramName" value="language" />
 		</bean>
-		<bean class="com.packt.webstore.interceptor.AuditingInterceptor" />
+		<bean class="com.bangla.store.interceptor.AuditingInterceptor" />
 
-		<bean class="com.packt.webstore.interceptor.PromoCodeInterceptor">
+		<bean class="com.bangla.store.interceptor.PromoCodeInterceptor">
 			<property name="promoCode" value="OFF3R" />
 			<property name="errorRedirect" value="invalidPromoCode" />
 			<property name="offerRedirect" value="products" />
@@ -70,7 +70,7 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 			<bean class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
 				<property name="classesToBeBound">
 					<list>
-						<value>com.packt.webstore.domain.Product</value>
+						<value>com.bangla.store.domain.Product</value>
 					</list>
 				</property>
 			</bean>
@@ -87,7 +87,7 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 		<property name="validationMessageSource" ref="messageSource" />
 	</bean>
 
-	<bean id="productValidator" class="com.packt.webstore.validator.ProductValidator">
+	<bean id="productValidator" class="com.bangla.store.validator.ProductValidator">
 		<property name="springValidators">
 			<set>
 				<ref bean="unitsInStockValidator" />
@@ -95,7 +95,7 @@ http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.3.x
 		</property>
 	</bean>
 
-	<bean id="unitsInStockValidator" class="com.packt.webstore.validator.UnitsInStockValidator" />
+	<bean id="unitsInStockValidator" class="com.bangla.store.validator.UnitsInStockValidator" />
 
 	<webflow-config:flow-executor id="flowExecutor"
 		flow-registry="flowRegistry" />
