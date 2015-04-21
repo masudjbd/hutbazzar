@@ -9,7 +9,7 @@ import java.util.Set;
 
 import org.springframework.stereotype.Repository;
 
-import com.packt.webstore.domain.Product;
+import com.bangla.store.domain.Product;
 import com.packt.webstore.domain.repository.ProductRepository;
 import com.packt.webstore.exception.ProductNotFoundException;
 

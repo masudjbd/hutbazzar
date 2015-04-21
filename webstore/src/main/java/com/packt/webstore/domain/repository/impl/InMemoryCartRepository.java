@@ -3,7 +3,7 @@ package com.packt.webstore.domain.repository.impl;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Repository;
-import com.packt.webstore.domain.Cart;
+import com.bangla.store.domain.Cart;
 import com.packt.webstore.domain.repository.CartRepository;
 
 @Repository

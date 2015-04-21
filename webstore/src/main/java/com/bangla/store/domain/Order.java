@@ -1,18 +1,35 @@
-package com.packt.webstore.domain;
+package com.bangla.store.domain;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.Valid;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name="Transaction")
 
 public class Order implements Serializable {
 	private static final long serialVersionUID = -3560539622417210365L;
-
+        
+        @Id @GeneratedValue @NotNull @Min(1)
 	private Long orderId;
+        
 	private Cart cart;
+        
+        @ManyToOne @Valid
 	private Customer customer;
+        
+        @ManyToOne @NotNull
 	private ShippingDetail shippingDetail;
 
 	public Order() {
-		this.customer = new Customer();
-		this.shippingDetail = new ShippingDetail();
+		//this.customer = new Customer();
+		//this.shippingDetail = new ShippingDetail();
 	}
 
 	public Long getOrderId() {

@@ -1,6 +1,6 @@
 package com.packt.webstore.service;
 
-import com.packt.webstore.domain.Cart;
+import com.bangla.store.domain.Cart;
 
 public interface CartService {
 	Cart create(Cart cart);

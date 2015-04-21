@@ -1,6 +1,6 @@
 package com.packt.webstore.service;
 
-import com.packt.webstore.domain.Order;
+import com.bangla.store.domain.Order;
 
 public interface OrderService {
 	void processOrder(String productId, int count);

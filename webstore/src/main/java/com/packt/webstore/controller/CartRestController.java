@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
-import com.packt.webstore.domain.Cart;
-import com.packt.webstore.domain.CartItem;
-import com.packt.webstore.domain.Product;
+import com.bangla.store.domain.Cart;
+import com.bangla.store.domain.CartItem;
+import com.bangla.store.domain.Product;
 import com.packt.webstore.exception.ProductNotFoundException;
 import com.packt.webstore.service.CartService;
 import com.packt.webstore.service.ProductService;

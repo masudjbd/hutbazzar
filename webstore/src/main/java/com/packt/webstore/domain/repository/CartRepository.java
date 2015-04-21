@@ -1,6 +1,6 @@
 package com.packt.webstore.domain.repository;
 
-import com.packt.webstore.domain.Cart;
+import com.bangla.store.domain.Cart;
 
 public interface CartRepository {
 	Cart create(Cart cart);

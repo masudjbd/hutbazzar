@@ -12,7 +12,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import com.packt.webstore.domain.Product;
+import com.bangla.store.domain.Product;
 
 public class TestProduct {
 

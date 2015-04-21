@@ -3,7 +3,7 @@ package com.packt.webstore.domain.repository.impl;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Repository;
-import com.packt.webstore.domain.Order;
+import com.bangla.store.domain.Order;
 import com.packt.webstore.domain.repository.OrderRepository;
 
 @Repository

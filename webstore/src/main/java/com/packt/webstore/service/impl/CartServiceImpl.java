@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.packt.webstore.domain.Cart;
+import com.bangla.store.domain.Cart;
 import com.packt.webstore.domain.repository.CartRepository;
 import com.packt.webstore.exception.InvalidCartException;
 import com.packt.webstore.service.CartService;

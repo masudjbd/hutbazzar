@@ -1,4 +1,4 @@
-package com.packt.webstore.domain;
+package com.bangla.store.domain;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

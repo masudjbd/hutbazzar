@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.packt.webstore.domain.Product;
+import com.bangla.store.domain.Product;
 
 public interface ProductRepository {
 	List<Product> getAllProducts();

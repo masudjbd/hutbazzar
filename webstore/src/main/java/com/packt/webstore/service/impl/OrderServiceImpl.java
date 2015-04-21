@@ -3,8 +3,8 @@ package com.packt.webstore.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.packt.webstore.domain.Order;
-import com.packt.webstore.domain.Product;
+import com.bangla.store.domain.Order;
+import com.bangla.store.domain.Product;
 import com.packt.webstore.domain.repository.OrderRepository;
 import com.packt.webstore.domain.repository.ProductRepository;
 import com.packt.webstore.service.CartService;

@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
-import com.packt.webstore.domain.Product;
+import com.bangla.store.domain.Product;
 
 @Component
 public class UnitsInStockValidator implements Validator {
