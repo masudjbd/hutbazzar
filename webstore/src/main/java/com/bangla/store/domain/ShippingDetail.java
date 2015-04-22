@@ -1,3 +1,4 @@
+
 package com.bangla.store.domain;
 
 import java.io.Serializable;
@@ -42,5 +43,6 @@ public class ShippingDetail implements Serializable {
 	}
 
 	 
+
 
 }

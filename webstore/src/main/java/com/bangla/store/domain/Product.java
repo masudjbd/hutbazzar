@@ -1,3 +1,4 @@
+
 package com.bangla.store.domain;
 
 import java.io.Serializable;
@@ -173,4 +174,5 @@ public class Product implements Serializable {
 	public String toString() {
 		return "Product [productId=" + productId + ", name=" + name + "]";
 	}
+
 }

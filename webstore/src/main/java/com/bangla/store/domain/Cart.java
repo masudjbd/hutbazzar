@@ -1,3 +1,4 @@
+
 package com.bangla.store.domain;
 
 import java.io.Serializable;
@@ -92,4 +93,5 @@ public class Cart  implements Serializable {
 			return false;
 		return true;
 	}
+
 }

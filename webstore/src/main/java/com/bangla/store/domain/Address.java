@@ -1,3 +1,4 @@
+
 package com.bangla.store.domain;
 
 import java.io.Serializable;
@@ -64,7 +65,7 @@ public class Address implements Serializable {
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
+}
 
 	 
 
-}

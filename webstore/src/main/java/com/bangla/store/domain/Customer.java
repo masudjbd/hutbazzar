@@ -1,3 +1,4 @@
+
 package com.bangla.store.domain;
 
 import java.io.Serializable;
@@ -172,3 +173,4 @@ public class Customer implements Serializable {
     // the code for the same is available in the code bundle which
     // can be downloaded from www.packtpub.com/support
 }
+

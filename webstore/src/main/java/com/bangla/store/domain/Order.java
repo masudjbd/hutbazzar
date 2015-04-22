@@ -1,3 +1,4 @@
+
 package com.bangla.store.domain;
 
 import com.bangla.store.domain.Customer;
@@ -52,4 +53,5 @@ public class Order implements Serializable {
 	// Override equals and hashCode based on orderId field.
 	// the code for the same is available in the code bundle
 	// which can be downloaded from www.packtpub.com/support
+
 }
