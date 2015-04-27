@@ -1,0 +1,53 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+    
+    <http auto-config="true">
+         
+        <intercept-url pattern="/products/add"
+                                access="ROLE_ADMIN" />
+        <form-login login-page="/login"
+                             default-target-url="/products/add" authentication-failure-url="/loginfailed" />
+        <logout logout-success-url="/logout" />
+ 
+    </http>
+     <authentication-manager>
+        <authentication-provider>
+          <password-encoder ref="encoder" />
+            <user-service>
+                <user name="Admin" password="$2a$10$u1ZdiMaD5crELFSj5o9vTO0ipenRrs8JjpKn8/UXcWgvNILI3b99." authorities="ROLE_ADMIN" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+    
+    	<beans:bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
+		<!--<beans:constructor-arg name="strength" value="10" />-->
+	</beans:bean>
+<!--     <authentication-manager>
+        <authentication-provider>
+            <user-service>
+                 <password-encoder hash="bcrypt" />
+                 <user name="Admin" password="$2a$10$ITT.z2GmRGxHJhqC4Toj0eUqopQkJ5rTz1FwMZpq5cabSVcC662WG" authorities="ROLE_USER, ROLE_ADMIN" />
+                 <user name="Test" password="$2a$10$pO8MNyo1pyMbg9wYDDUn0OjhPdxyeMzlOreKcpLi.L9N.KEIVqtCq" authorities="ROLE_USER" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>-->
+<!--    <authentication-manager>
+        <authentication-provider>
+            <jdbc-user-service data-source-ref="dataSource">
+    </authentication-manager>
+</authentication-provider>
+
+<bean id="dataSource"
+  class="rog.springframework.jdbc.datasource.DriverManagerDatasource">
+<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+<property name="url" value="jdbc://localhost/webstore" />
+<property name="username" value="root" />
+<property name="password" value="" />
+</bean>
+    -->
+        
+</beans:beans>
