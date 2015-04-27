@@ -79,6 +79,7 @@
                 <property name="classesToBeBound">
                     <list>
                         <value>com.bangla.store.domain.Product</value>
+                        <value>com.bangla.store.domain.Category</value>
                     </list>
                 </property>
             </bean>
@@ -159,7 +160,8 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
                 <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.hbm2ddl.auto">create</prop>
+                <!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
+                
             </props>
         </property>
     </bean>

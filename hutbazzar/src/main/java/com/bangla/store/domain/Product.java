@@ -56,7 +56,7 @@ public class Product implements Serializable {
         this.condt = condt;
     }
 
-    @ManyToOne
+    @ManyToOne  @JsonIgnore
     @JoinColumn(name = "categoryId")
     private Category category;
 
@@ -74,6 +74,7 @@ public class Product implements Serializable {
     /*public void setCategoryId(Category categoryId) {
      this.category = categoryId;
      }*/
+    @XmlTransient  @JsonIgnore
     public Category getCategory() {
         return category;
     }

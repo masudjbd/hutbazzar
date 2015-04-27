@@ -10,6 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+import org.codehaus.jackson.annotate.JsonIgnore;
 import org.hibernate.validator.constraints.NotBlank;
 
 /**
@@ -31,9 +33,11 @@ public class Category implements Serializable {
     private String categoryName;
     private String categoryDescription;
 
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+    @XmlTransient @JsonIgnore
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "category", cascade = CascadeType.ALL)
     private List<Product> products;
 
+    @XmlTransient @JsonIgnore
     public List<Product> getProducts() {
         return products;
     }
