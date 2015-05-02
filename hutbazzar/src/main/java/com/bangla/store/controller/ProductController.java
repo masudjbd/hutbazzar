@@ -45,7 +45,7 @@ public class ProductController {
         @Autowired
 	private CategoryService categoryService;
 
-//	@Autowired
+	@Autowired
 	private UnitsInStockValidator unitsInStockValidator;
 
 	@Autowired
